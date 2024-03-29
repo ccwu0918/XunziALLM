@@ -24,6 +24,8 @@ st.sidebar.image(image, width=300)
 # 设置为模型ID或本地文件夹路径
 # model_path = "/home/gpuall/ifs_data/pre_llms/Xunzi-Qwen-Chat"
 model_path = "./Xunzi-Qwen-Chat"
+# model_path = "/content/XunziALLM/Xunzi-Qwen-Chat/Xunzillm4cc/Xunzi-Qwen-Chat"
+
 
 @st.cache_resource
 def get_model():
@@ -65,16 +67,16 @@ if buttonClean:
 # 渲染聊天历史记录
 for i, message in enumerate(st.session_state.history):
     if message["role"] == "user":
-        with st.chat_message(name="user", avatar="用户头像.png"):
+        with st.chat_message(name="user", avatar="./web/用户头像.png"):
             st.markdown(message["content"])
     else:
-        with st.chat_message(name="assistant", avatar="机器人头像.png"):
+        with st.chat_message(name="assistant", avatar="./web/机器人头像.png"):
             st.markdown(message["content"])
 
 # 输入框和输出框
-with st.chat_message(name="user", avatar="用户头像.png"):
+with st.chat_message(name="user", avatar="./web/用户头像.png"):
     input_placeholder = st.empty()
-with st.chat_message(name="assistant", avatar="机器人头像.png"):
+with st.chat_message(name="assistant", avatar="./web/机器人头像.png"):
     message_placeholder = st.empty()
 
 # 获取用户输入
