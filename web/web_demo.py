@@ -11,10 +11,11 @@ st.set_page_config(
 )
 # 在sider添加图片
 from PIL import Image
-image = Image.open('荀子logonew.png')
+image = Image.open('./web/荀子logonew.png')
 st.sidebar.image(image, width=300)
 # 设置为模型ID或本地文件夹路径
-model_path = "/home/gpuall/ifs_data/pre_llms/Xunzi-Qwen-Chat"
+# model_path = "/home/gpuall/ifs_data/pre_llms/Xunzi-Qwen-Chat"
+model_path = "./Xunzi-Qwen-Chat"
 
 @st.cache_resource
 def get_model():
