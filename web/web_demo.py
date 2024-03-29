@@ -67,16 +67,16 @@ if buttonClean:
 # 渲染聊天歷史記錄
 for i, message in enumerate(st.session_state.history):
     if message["role"] == "user":
-        with st.chat_message(name="user", avatar="./web/用户头像.png"):
+        with st.chat_message(name="user", avatar="./web/用戶頭像.png"):
             st.markdown(message["content"])
     else:
-        with st.chat_message(name="assistant", avatar="./web/机器人头像.png"):
+        with st.chat_message(name="assistant", avatar="./web/機器人頭像.png"):
             st.markdown(message["content"])
 
 # 輸入框和輸出框
-with st.chat_message(name="user", avatar="./web/用户头像.png"):
+with st.chat_message(name="user", avatar="./web/用戶頭像.png"):
     input_placeholder = st.empty()
-with st.chat_message(name="assistant", avatar="./web/机器人头像.png"):
+with st.chat_message(name="assistant", avatar="./web/機器人頭像.png"):
     message_placeholder = st.empty()
 
 # 取得使用者輸入
