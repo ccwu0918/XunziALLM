@@ -3,6 +3,14 @@ import torch
 from transformers import AutoModel, AutoTokenizer,AutoModelForCausalLM
 from transformers.generation import GenerationConfig
 import json
+
+
+from modelscope.hub.snapshot_download import snapshot_download
+
+model_dir = snapshot_download('Xunzillm4cc/Xunzi-Qwen-Chat', 
+                              cache_dir='./Xunzi-Qwen-Chat', 
+                              revision='master')
+
 # 设置页面标题、图标和布局
 st.set_page_config(
     page_title="荀子大模型效果演示",
