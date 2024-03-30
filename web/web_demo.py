@@ -25,6 +25,7 @@ st.sidebar.image(image, width=300)
 # model_path = "/home/gpuall/ifs_data/pre_llms/Xunzi-Qwen-Chat"
 # model_path = "./Xunzi-Qwen-Chat"
 model_path = "../Xunzi-Qwen-Chat/Xunzillm4cc/Xunzi-Qwen-Chat"
+model_path = "/content/XunziALLM/Xunzi-Qwen-Chat/Xunzillm4cc/Xunzi-Qwen-Chat"
 
 
 @st.cache_resource
