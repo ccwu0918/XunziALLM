@@ -8,7 +8,7 @@ import json
 from modelscope.hub.snapshot_download import snapshot_download
 
 model_dir = snapshot_download('Xunzillm4cc/Xunzi-Qwen-Chat', 
-                              cache_dir='./Xunzi-Qwen-Chat', 
+                              cache_dir='../', 
                               revision='master')
 
 # 設定頁面標題、圖示和版面
@@ -25,7 +25,8 @@ st.sidebar.image(image, width=300)
 # model_path = "/home/gpuall/ifs_data/pre_llms/Xunzi-Qwen-Chat"
 # model_path = "./Xunzi-Qwen-Chat"
 model_path = "../Xunzi-Qwen-Chat/Xunzillm4cc/Xunzi-Qwen-Chat"
-model_path = "/content/XunziALLM/Xunzi-Qwen-Chat/Xunzillm4cc/Xunzi-Qwen-Chat"
+model_path = "../Xunzillm4cc/Xunzi-Qwen-Chat"
+model_path = "/content/Xunzillm4cc/Xunzi-Qwen-Chat"
 
 
 @st.cache_resource
